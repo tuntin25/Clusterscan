@@ -22,15 +22,15 @@ import (
 
 // ClusterScanSpec defines the desired state of ClusterScan
 type ClusterScanSpec struct {
-	Schedule string   `json:"schedule,omitempty"` // Cron schedule for recurring scans
-	Command  []string `json:"command"`            // Command to run for the scan
+	Schedule string   `json:"schedule,omitempty"`
+	Command  []string `json:"command"`
 }
 
 // ClusterScanStatus defines the observed state of ClusterScan
 type ClusterScanStatus struct {
-	JobName string       `json:"jobName,omitempty"` // Name of the associated Job or CronJob
-	LastRun *metav1.Time `json:"lastRun,omitempty"` // Last time the scan was run
-	Result  string       `json:"result,omitempty"`  // Result of the last scan
+	JobName string       `json:"jobName,omitempty"`
+	LastRun *metav1.Time `json:"lastRun,omitempty"`
+	Result  string       `json:"result,omitempty"`
 }
 
 //+kubebuilder:object:root=true
