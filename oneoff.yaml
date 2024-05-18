@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: echo-job
+spec:
+  template:
+    spec:
+      containers:
+        - name: echo
+          image: busybox
+          command: ["echo", "This is a one-off job!"]
+      restartPolicy: Never
